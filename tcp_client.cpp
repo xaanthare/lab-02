@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
     char socket_read_buffer[1024];
     
     // TODO: Fill out the server ip and port
-    std::string server_ip = "localhost";
+    std::string server_ip = "172.20.10.5";
     std::string server_port = "8000";
 
     int opt = 1;
@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
     // TODO: Create a TCP socket()
 
 	client_fd = socket(AF_INET, SOCK_STREAM, 0);
-	printf("%d",client_fd);
+	//printf("%d",client_fd);
     // Enable reusing address and port
     if (setsockopt(client_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) {
    	 return -1;
